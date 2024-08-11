@@ -1,11 +1,14 @@
 from django.contrib import admin
 from django.urls import path
-from cameras.views import home, login, get_cameras, get_camera_stream
+from cameras import views
 
 urlpatterns = [
-    path('', home),
-    path('api/login/', login),
-    path('api/cameras/', get_cameras),
-    path('api/stream/<int:camera_id>/', get_camera_stream),
+    path('', views.home),
+    path('api/login/', views.login),
+    path('api/cameras/', views.get_cameras),
+    path('api/stream/<int:camera_id>/', views.get_camera_stream),
+    path('api/recording-info/<int:camera_id>/', views.get_recording_info),
+    path('api/recording-stream/<int:camera_id>/', views.get_recording_stream),
+    path('api/recording-timeline/<int:camera_id>/', views.get_recording_timeline),
     path('admin/', admin.site.urls)
 ]
