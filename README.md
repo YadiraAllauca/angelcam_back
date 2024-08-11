@@ -1,4 +1,4 @@
-# Angelcam App - backend
+# Angelcam App - Backend
 
 This is an application for viewing live streams and recordings from cameras using the Angelcam API. The application allows users to stream live video, view available recording segments, and search within any segment.
 
@@ -28,18 +28,30 @@ Make sure you have the following configured:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/YadiraAllauca/BackendAlquilerDeVehiculos.git
+git clone https://github.com/YadiraAllauca/angelcam_back.git
 ```
-
-2. Install the dependencies with:
+2. Create a virtual environment:
 
 ```bash
-npm install
+python -m venv venv
 ```
-3. Check the operation of the application with:
+3. Activate the virtual environment:
 ```bash
-npm start
+venv\Scripts\activate
 ```
+4. Install the dependencies:
+```bash
+pip install -r requirements.txt
+```
+5. Apply database migrations:
+```bash
+python manage.py migrate
+```
+5. Run the development server:
+```bash
+python manage.py runserver
+```
+The application should now be running on http://127.0.0.1:8000/
 
 ## 🤝 Contribution
 If you would like to contribute to this project, follow these steps:
