@@ -4,3 +4,9 @@ db.sqlite3
 .env
 .vscode/
 .idea/
+.venv/
+venv/
+.env.*
+!.env.example
+.coverage
+htmlcov/
